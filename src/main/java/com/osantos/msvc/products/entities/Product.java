@@ -23,7 +23,7 @@ public class Product {
     private Double price; //Sino se asigna el nombre por defecto que seria: price
 
     @Column(name = "create_at")
-    private LocalDate createAt;
+    private LocalDate createAt; //Aqui solo es fecha con Time es fecha y hora
 
     public Long getId() {
         return id;
