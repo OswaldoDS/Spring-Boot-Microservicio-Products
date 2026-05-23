@@ -4,7 +4,6 @@ import java.util.List;
 import java.util.Optional;
 
 import org.springframework.web.bind.annotation.RestController;
-import org.springframework.web.service.annotation.GetExchange;
 
 import com.osantos.msvc.products.entities.Product;
 import com.osantos.msvc.products.services.ProductService;
@@ -24,12 +23,12 @@ public class ProductController {
         this.service = service;
     }
 
-    // @GetExchange Se puede implementar de esta manera de forma más genérica al usar el signo '?'
+    // @GetMapping Se puede implementar de esta manera de forma más genérica al usar el signo '?'
     // public ResponseEntity<?> list (){ //Convierte la lista de productos en un a lista JSON
     //     return ResponseEntity.ok(this.service.findAll());
     // }
 
-    @GetExchange 
+    @GetMapping 
     public List<Product> list(){ //Convierte la lista de productos en un a lista JSON
         return this.service.findAll();
     }
