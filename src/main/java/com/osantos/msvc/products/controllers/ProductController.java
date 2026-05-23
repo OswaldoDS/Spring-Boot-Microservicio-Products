@@ -11,9 +11,11 @@ import com.osantos.msvc.products.services.ProductService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 
 @RestController //Para manejar peticiones HTTP del usuario
+@RequestMapping("/api/v1/products")
 public class ProductController {
 
     //Inyectamos un atributo
